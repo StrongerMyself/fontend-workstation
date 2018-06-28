@@ -1,0 +1,30 @@
+{
+    "name": "frontend",
+    "demoServer": "pro-7.ru",
+    "version": "1.0.0",
+    "scripts": {
+        "start": "gulp build && gulp",
+        "dev": "gulp",
+        "deploy": "gulp deploy",
+        "prod": "gulp build && gulp deploy"
+    },
+    "devDependencies": {
+        "browser-sync": "^2.23.2",
+        "del": "^3.0.0",
+        "gulp": "^3.9.1",
+        "gulp-autoprefixer": "^4.1.0",
+        "gulp-cache": "^1.0.2",
+        "gulp-cssnano": "^2.1.2",
+        "gulp-iconfont": "^9.0.2",
+        "gulp-iconfont-css": "^2.1.0",
+        "gulp-imagemin": "^4.1.0",
+        "gulp-jade": "^1.1.0",
+        "gulp-sass": "^3.1.0",
+        "gulp-sourcemaps": "^2.6.2",
+        "gulp-uglify": "^3.0.0",
+        "gulp-util": "^3.0.8",
+        "imagemin-pngquant": "^5.0.1",
+        "node-env-file": "^0.1.8",
+        "vinyl-ftp": "^0.6.0"
+    }
+}

@@ -1,0 +1,41 @@
+@import "_header"
+@import "_nav"
+@import "_footer"
+@import "_popup"
+
+.page
+	position: relative
+	z-index: 1
+	overflow: hidden
+	width: 100%
+	min-height: 100vh
+	&__body
+
+.wrap
+	position: relative
+	margin: 0 auto
+	max-width: $maxW
+	min-width: $minW
+	padding: 0 $wrapperM-padd
+
+	+max-screen($screenSL)
+		padding-left: $wrapperS-padd
+		padding-right: $wrapperS-padd
+
+	+max-screen($screenSS)
+		padding-right: $wrapperSS-padd
+		padding-left: $wrapperSS-padd
+
+// .wrap-inner
+//     display: block
+//     width: auto
+//     margin-left: -$wrapperM-padd
+//     margin-right: -$wrapperM-padd
+
+//     +max-screen($screenSL)
+//         margin-left: -$wrapperS-padd
+//         margin-right: -$wrapperS-padd
+
+//     +max-screen($screenSS)
+//         margin-left: -$wrapperSS-padd
+//         margin-right: -$wrapperSS-padd

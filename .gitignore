@@ -1,0 +1,4 @@
+# Runtime data
+node_modules/
+bower_componets/
+package-lock.json
