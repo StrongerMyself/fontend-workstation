@@ -1,7 +1,7 @@
 # Фронтенд АРМ. Fontend Workstation
 ### Команды: 
 - `npm start` || `npm run start` || `gulp build && gulp` - начало работы с предварительной обработкой.
-- `npm run dev` || `gulp` - начало работы без предварительного обраобтки.
+- `npm run dev` || `gulp` - начало работы без предварительного обработки.
 - `npm run deploy` || `gulp deploy` - отправка изменений на демо сервер.
 - `npm run prod` || `gulp build && gulp deploy` - отправка изменений на демо сервер с предварительной обработкой.
 

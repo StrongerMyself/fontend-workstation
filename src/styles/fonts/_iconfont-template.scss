@@ -26,19 +26,19 @@
 
 @function <%= cssClass%>-char($filename) {
     $char: "";
-<% _.each(glyphs, function(glyph) { %>
+    <% _.each(glyphs, function(glyph) { %>
     @if $filename == <%= glyph.fileName %> {
-    $char: "\<%= glyph.codePoint %>";
-}<% }); %>
+        $char: "\<%= glyph.codePoint %>";
+    }<% }); %>
 
-@return $char;
-}
+    @return $char;
+    }
 
-@mixin <%= cssClass%>($filename, $insert: after, $extend: true) {
-&:#{$insert} {
+    @mixin <%= cssClass%>($filename, $insert: after, $extend: true) {
+    &:#{$insert} {
 
-    content: <%= cssClass%>-char($filename);
-}
+        content: <%= cssClass%>-char($filename);
+    }
 }
 
 <% _.each(glyphs, function(glyph) { %>.<%= cssClass%>--<%= glyph.fileName %> {

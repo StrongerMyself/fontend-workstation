@@ -28,20 +28,20 @@
     $char: "";
 
     @if $filename == check {
-    $char: "\E001";
-}
-    @if $filename == cross {
-    $char: "\E002";
-}
+        $char: "\E001";
+    }
+        @if $filename == cross {
+        $char: "\E002";
+    }
 
-@return $char;
-}
+    @return $char;
+    }
 
-@mixin iconic($filename, $insert: after, $extend: true) {
-&:#{$insert} {
+    @mixin iconic($filename, $insert: after, $extend: true) {
+    &:#{$insert} {
 
-    content: iconic-char($filename);
-}
+        content: iconic-char($filename);
+    }
 }
 
 .iconic--check {
