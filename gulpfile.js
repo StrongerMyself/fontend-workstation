@@ -5,6 +5,7 @@ var gulp = require('gulp'),
     del = require('del'),
     sourcemaps = require('gulp-sourcemaps'),
     uglify = require('gulp-uglify'),
+    babel = require('gulp-babel'),
 
     jade = require('gulp-jade'),
     sass = require('gulp-sass'),
@@ -33,7 +34,8 @@ gulp.task('browserSync', () => {
         },
         notify: false,
         tunnel: false,
-        localOnly: true
+        localOnly: true,
+        open: false
     })
 })
 
@@ -61,6 +63,7 @@ gulp.task('style', () => {
 gulp.task('js', () => {
     gulp.src('src/js/*.js')
         .pipe(sourcemaps.init())
+        .pipe(babel({presets: ['@babel/env']}))
         .pipe(uglify())
         .on('error', function (error) {
             console.log(['', ("[" + error.name + " in " + error.plugin + "]"), error.message, ''].join('\n'));

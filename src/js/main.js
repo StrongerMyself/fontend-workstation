@@ -1,4 +1,8 @@
-(function() {
-  console.log('hello new project');
+const func = (inMsg = 'hello new project') => {
+	let msg = inMsg
+	console.log(msg)
+}
 
-}).call(this);
+(function() {
+	func()
+}).call(this)
