@@ -33,6 +33,7 @@ gulp.task('browserSync', () => {
         },
         notify: false,
         tunnel: false,
+        localOnly: true
     })
 })
 
@@ -61,6 +62,10 @@ gulp.task('js', () => {
     gulp.src('src/js/*.js')
         .pipe(sourcemaps.init())
         .pipe(uglify())
+        .on('error', function (error) {
+            console.log(['', ("[" + error.name + " in " + error.plugin + "]"), error.message, ''].join('\n'));
+            this.end();
+        })
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('dist/scripts'))
 })
